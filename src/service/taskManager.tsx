@@ -47,6 +47,9 @@ class TaskManager {
         this.tasks = [];
         localStorage.removeItem(this.storageKey)
     }
+    get allTasks(){
+        return [...this.tasks]
+    }
 }
-
-export default TaskManager
+const myTASKS = new TaskManager();
+export default myTASKS

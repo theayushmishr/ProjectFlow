@@ -1,6 +1,4 @@
-import { Status,Priority } from "../model/task"
 import { LetterCaseCapitalizeIcon,CalendarIcon,TriangleDownIcon, SymbolIcon , DotsHorizontalIcon} from "@radix-ui/react-icons"
-import Dropdown from "./dropdown"
 import TaskColumn from "./taskColumn";
 
 interface Task {
