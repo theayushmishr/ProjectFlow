@@ -1,12 +1,13 @@
 
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Header from "../component/header"
 import TaskTable from "../component/taskTable"
-import myTASKS from "../service/taskManager"
+import TaskContext from "../context/taskContext"
 const Main = ()=>{
-   const [tasks,setTasks] = useState(myTASKS.allTasks)
+   const TASKS = useContext(TaskContext)
+   const [tasks,setTasks] = useState(TASKS.allTasks)
    useEffect(()=>{
-      setTasks(myTASKS.allTasks)
+      setTasks(TASKS.allTasks)
    },[])
  return(
     <div className="px-5 py-4">
